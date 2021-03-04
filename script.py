@@ -14,3 +14,6 @@ end = datetime(2019, 1,1)
 
 #Use web.DataReader to get historical prices
 nasdaq_data = web.DataReader("NASDAQ100", "fred", start, end)
+
+#Get S&P data
+sap_data = web.DataReader(“SP500”, “fred”, start, end)
