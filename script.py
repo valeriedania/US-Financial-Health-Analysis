@@ -29,3 +29,10 @@ export_data = wb.download(indicator='NE.EXP.GNFS.CN', country=['US'], start=star
 #Define log return function
 def log_return(prices):
   return np.log(prices / prices.shift(1))
+
+#Log return variables for each dataset
+crude_oil_returns = log_return(crudeoil_prices['Crude_Oil_Price'])
+nasdaq_returns = log_return(nasdaq_data['NASDAQ100'])
+sap_returns = log_return(sap_data['SP500'])
+gdp_returns = log_return(gdp_data['NY.GDP.MKTP.CD'])
+export_returns = log_return(export_data['NE.EXP.GNFS.CN'])
