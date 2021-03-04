@@ -21,3 +21,6 @@ sap_data = web.DataReader(“SP500”, “fred”, start, end)
 
 #Import GDP data from World Bank API
 gdp_data = wb.download(indicator='NY.GDP.MKTP.CD', country['US'], start=start, end=end)
+
+#Import data of goods and services
+export_data = wb.download(indicator='NE.EXP.GNFS.CN', country=['US'], start=start, end=end)
