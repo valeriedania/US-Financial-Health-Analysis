@@ -1,6 +1,7 @@
 import seaborn as sns
 import pandas as pd
 import pandas_datareader.data as web
+import pandas_datareader.wb as wb 
 from datetime import datetime
 
 #Import commodity prices
@@ -17,3 +18,6 @@ nasdaq_data = web.DataReader("NASDAQ100", "fred", start, end)
 
 #Get S&P data
 sap_data = web.DataReader(“SP500”, “fred”, start, end)
+
+#Import GDP data from World Bank API
+gdp_data = wb.download(indicator='NY.GDP.MKTP.CD', country['US'], start=start, end=end)
