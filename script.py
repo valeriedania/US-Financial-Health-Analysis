@@ -1,4 +1,5 @@
 import seaborn as sns
+import numpy as np
 import pandas as pd
 import pandas_datareader.data as web
 import pandas_datareader.wb as wb 
@@ -24,3 +25,7 @@ gdp_data = wb.download(indicator='NY.GDP.MKTP.CD', country['US'], start=start, e
 
 #Import data of goods and services
 export_data = wb.download(indicator='NE.EXP.GNFS.CN', country=['US'], start=start, end=end)
+
+#Define log return function
+def log_return(prices):
+  return np.log(prices / prices.shift(1))
