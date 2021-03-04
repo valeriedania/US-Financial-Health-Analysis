@@ -36,3 +36,11 @@ nasdaq_returns = log_return(nasdaq_data['NASDAQ100'])
 sap_returns = log_return(sap_data['SP500'])
 gdp_returns = log_return(gdp_data['NY.GDP.MKTP.CD'])
 export_returns = log_return(export_data['NE.EXP.GNFS.CN'])
+
+#Compare return volatility
+print('gold:', gold_returns.var())
+print('oil:', crude_oil_returns.var())
+print('nasdaq:', nasdaq_returns.var())
+print('sap:', sap_returns.var())
+print('gdp:', gdp_returns.var())
+print('export:', export_returns.var())
